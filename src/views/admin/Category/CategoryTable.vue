@@ -108,7 +108,7 @@ const isLoading = ref(false)
 const route = useRoute()
 const router = useRouter()
 
-const emit = defineEmits(['deleted']); // to call function in parent component
+const emit = defineEmits(['deleted','refresh']); // to call function in parent component
 
 const modalOpen = ref(false)
 const modalMode = ref('add') // or 'edit'
@@ -130,6 +130,7 @@ const handleUpdate = async (data)=> {
 
     if(res.status){
        toast.success('✅ Categories successfully!')
+       emit('refresh'); // to call function in parent component
     }
 
   //console.log('Update:', data)

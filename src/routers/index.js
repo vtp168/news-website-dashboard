@@ -19,6 +19,11 @@ const routes = [
         name: 'deatail-post',
         component: () => import('@public/posts/PostDetail.vue'),
       },
+      {
+        path: 'category/:slug',
+        name: 'category',
+        component: () => import('@public/post-category/Category.vue'),
+      },
 
    
       // Add other public routes

@@ -3,7 +3,7 @@
   <div class="max-w-screen-xl container flex flex-wrap items-center justify-between mx-auto p-4">
     <router-link to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo">
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+      <span class="self-center text-2xl text-black font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
     </router-link>
 
     <button @click="toggleMenu" class="md:hidden text-gray-500 hover:text-black dark:text-white focus:outline-none">
@@ -15,10 +15,12 @@
     </button>
 
     <div class="hidden md:flex items-center space-x-6">
-      <router-link to="/" class="text-blue-700">Home</router-link>
-      <router-link to="/detail" class="text-gray-700 dark:text-white hover:text-blue-500">About</router-link>
-      <router-link to="#" class="text-gray-700 dark:text-white hover:text-blue-500">Services</router-link>
-      <router-link to="#" class="text-gray-700 dark:text-white hover:text-blue-500">Contact</router-link>
+      <router-link to="/" class="text-blue-700">ទំព័រដើម</router-link>
+      <router-link to="/category/local-news" class="text-gray-700 dark:text-white hover:text-blue-500">ព័ត៌មានជាតិ</router-link>
+      <router-link :to="{name:'category',params:{slug:'international-news'}}" class="text-gray-700 dark:text-white hover:text-blue-500">ព័ត៌មានអន្តរជាតិ</router-link>
+      <router-link to="/category/politics" class="text-gray-700 dark:text-white hover:text-blue-500">នយោបាយ</router-link>
+      <router-link to="/category/sports" class="text-gray-700 dark:text-white hover:text-blue-500">កីឡា</router-link>
+      <router-link to="/category/economy" class="text-gray-700 dark:text-white hover:text-blue-500">សេដ្ឋកិច្ច</router-link>
     </div>
   </div>
 </nav>
@@ -47,10 +49,24 @@
       </button>
     </div>
     <ul class="flex flex-col p-4 space-y-3">
-      <li><router-link @click="toggleMenu" to="/" class="text-gray-800 dark:text-white">Home</router-link></li>
-      <li><router-link @click="toggleMenu" to="/detail" class="text-gray-800 dark:text-white">About</router-link></li>
-      <li><router-link @click="toggleMenu" to="#" class="text-gray-800 dark:text-white">Services</router-link></li>
-      <li><router-link @click="toggleMenu" to="#" class="text-gray-800 dark:text-white">Contact</router-link></li>
+      <li>
+        <router-link @click="toggleMenu" to="/" class="text-blue-700">ទំព័រដើម</router-link>
+      </li>
+      <li>
+        <router-link @click="toggleMenu" to="/category/local-news" class="text-gray-800 dark:text-white">ព័ត៌មានជាតិ</router-link>
+      </li>
+      <li>
+        <router-link @click="toggleMenu" to="/category/international-news" class="text-gray-800 dark:text-white">ព័ត៌មានអន្តរជាតិ</router-link>
+      </li>
+      <li>
+        <router-link @click="toggleMenu" to="/category/politics" class="text-gray-800 dark:text-white">នយោបាយ</router-link>
+      </li>
+      <li>
+        <router-link @click="toggleMenu" to="/category/sports" class="text-gray-800 dark:text-white">កីឡា</router-link>
+      </li>
+      <li>
+        <router-link @click="toggleMenu" to="/category/economy" class="text-gray-800 dark:text-white">សេដ្ឋកិច្ច</router-link>
+      </li>
     </ul>
   </div>
 </template>

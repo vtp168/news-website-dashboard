@@ -84,17 +84,20 @@
               </div>
             </td>
             <td class="px-4 py-2 space-x-2">
-            <button
-              @click="editPost(post.id)"
-              class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 text-sm"
-            >
-              Edit
-            </button>
+              <router-link :to="{ name: 'deatail-post', params: { id: post.id } }">
+               <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-red-600 text-sm">
+                    <EyeOutlineIcon title="View" />
+               </button>
+               </router-link>
+                <button
+                  @click="editPost(post.id)" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 text-sm">
+                  <PencilBoxOutlineIcon />
+                </button>
             <button
               @click="deletePost(post.id)"
               class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-sm"
             >
-              Delete
+             <DeleteOutlineIcon />
             </button>
           </td>
 
@@ -111,6 +114,11 @@ import { useRoute, useRouter } from 'vue-router'
 import TogglePublish from '@/components/admin/forms/FormElements/TogglePublishSwitch.vue'
 import axios from 'axios'
 import { useToast } from 'vue-toastification'
+import PencilBoxOutlineIcon from 'vue-material-design-icons/PencilBoxOutline.vue';
+import DeleteOutlineIcon from 'vue-material-design-icons/DeleteOutline.vue';
+import EyeOutlineIcon from 'vue-material-design-icons/EyeOutline.vue';
+
+
 
 const toast = useToast()
 

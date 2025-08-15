@@ -14,7 +14,7 @@
           </div>
         </template>
 
-        <CategoryTable :categories="categories" @deleted="fetchData"/> <!--to refresh use emit data from child-->
+        <CategoryTable :categories="categories" @deleted="fetchData" @refresh="fetchData"/> <!--to refresh use emit data from child-->
       </ComponentCard>
     </div>
       <!-- Modal Part -->
@@ -92,7 +92,7 @@ const fetchData = async () => {
   }
   catch (err) {
     console.error(err)
-    isLoading=false
+    isLoading.value=false
   }
   }
 

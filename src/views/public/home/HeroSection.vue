@@ -12,7 +12,7 @@
           </router-link>
           <div class="absolute px-5 pt-8 pb-5 bottom-0 w-full bg-gradient-cover">
           <router-link :to="`article/detail/${p.id}`">
-            <h2 class="text-xl font-bold capitalize text-white mb-3">{{p?.title}}</h2>
+            <h2 class="text-lg font-bold capitalize text-white mb-3">{{p?.title}}</h2>
           </router-link>
           <!-- <p class="text-gray-100 hidden sm:inline-block">This is a wider card with supporting text below as a natural lead-in to additional content. This very helpfull for generate default content..</p> -->
           <div class="pt-1">

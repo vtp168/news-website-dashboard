@@ -337,7 +337,8 @@ const handleSubmit = async () => {
     )
 
     toast.success('✅ Post updated successfully!')
-    resetForm()
+    router.push({ name: 'posts' }) // Redirect to all posts page
+    //resetForm()
   } catch (err) {
     toast.error('❌ Failed to update post.')
     console.error(err)
